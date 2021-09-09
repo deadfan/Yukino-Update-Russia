@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    @apply bg-white dark:bg-gray-900 text-gray-800 dark:text-white font-sans overflow-x-hidden;
+}
+
+hr {
+    @apply border-gray-600;
+}
+
+.panel {
+    @apply dark:bg-gray-800 px-8 py-6 shadow rounded;
+}
+
+.hover-pop {
+    transition: 0.2s;
+}
+
+.hover-pop:hover {
+    transform: scale(1.015);
+}
+
+.slim-scroll::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-800 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600 rounded-full;
+}
+
+.fade-enter-active {
+    transition: 0.3s ease;
+}
+
+.fade-leave-active {
+    transition: 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.swiper-pagination.swiper-pagination-bullets {
+    bottom: 0;
+}
+
+.swiper-pagination-bullet {
+    @apply bg-gray-200 opacity-100;
+}
+
+.dark .swiper-pagination-bullet {
+    @apply bg-gray-700 opacity-100;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    @apply bg-indigo-500 opacity-100;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="url"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="search"],
+input[type="tel"],
+input[type="checkbox"],
+input[type="radio"],
+select,
+select[multiple],
+textarea {
+    @apply focus:border-indigo-500;
+}
+
+input[type="checkbox"]:focus {
+    box-shadow: none;
+
+    @apply focus:border focus:border-gray-500;
+}
